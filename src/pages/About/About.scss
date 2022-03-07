@@ -1,1 +1,65 @@
 @use "../../scss/abstracts/" as *;
+
+.about {
+  &__container {
+    row-gap: 2.5rem !important;
+  }
+
+  &__me {
+    width: 250px;
+    border-radius: 2rem;
+    padding-top: 2rem;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--first-color),
+      transparent
+    );
+    display: grid;
+
+    justify-self: center;
+    &__img {
+      width: 180px;
+
+      transform: rotate(10deg);
+      transition: var(--transition);
+      justify-self: center;
+      &:hover {
+        transform: rotate(0);
+      }
+    }
+  }
+
+  &__data {
+    text-align: center;
+    &__info {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      &__box {
+        background-color: var(--container-color);
+        border-radius: 0.75rem;
+        padding: 0.75rem 0.5rem;
+        &-icon {
+          font-size: 1.5rem;
+          color: var(--first-color);
+          margin-bottom: 0.5rem;
+        }
+
+        &-title {
+          font-size: var(--small-font-size);
+        }
+
+        &-subtitle {
+          font-size: var(--tiny-font-size);
+        }
+      }
+    }
+
+    &__description {
+      margin-bottom: 2rem;
+    }
+  }
+}

@@ -45,6 +45,7 @@
   }
 }
 
+// for active link
 .active {
   background: linear-gradient(
     180deg,
@@ -52,4 +53,10 @@
     hsla(var(--first-hue), var(--sat), var(--lig), 0.2)
   );
   box-shadow: 0 0 rem(16) hsla(var(--first-hue), var(--sat), var(--lig), 0.4);
+}
+
+// when scrolling change the background
+
+.scroll-header {
+  box-shadow: 0 4px 4px hsla(0, 0%, 4%, 0.3);
 }

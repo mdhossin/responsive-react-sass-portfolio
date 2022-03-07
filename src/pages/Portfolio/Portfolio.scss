@@ -1,1 +1,48 @@
 @use "../../scss//abstracts/" as *;
+.portfolio {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+
+    @include breakpoints-down("medium") {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    @include breakpoints-down("small") {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    background-color: var(--container-color);
+    padding: 1.3rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+
+    &:hover {
+      border-color: var(--first-color);
+      background-color: transparent;
+    }
+
+    &__image {
+      border-radius: 1.5rem;
+      overflow: hidden;
+
+      &-img {
+        height: 260px;
+      }
+    }
+
+    &-title {
+      margin: 1.2rem 0;
+    }
+
+    &-cta {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 0.7rem;
+    }
+  }
+}

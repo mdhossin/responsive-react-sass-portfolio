@@ -6,7 +6,9 @@ import {
   Home,
   Portfolio,
   Services,
+  Skills,
   Testimonials,
+  Work,
 } from "./pages";
 import Footer from "./pages/Footer/Footer";
 import "./scss/App.scss";
@@ -17,6 +19,9 @@ function App() {
       <main>
         <Home />
         <About />
+        <Skills />
+        <Services />
+        <Portfolio />
         {/* <About />
       <Experience />
       <Services />

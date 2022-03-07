@@ -1,0 +1,48 @@
+@use "../../scss/abstracts/" as *;
+.skills {
+  &__container {
+    row-gap: 2rem;
+    padding-top: 1rem;
+  }
+
+  &__content {
+    background-color: var(--container-color);
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+    &-title {
+      font-size: var(--normal-font-size);
+      font-weight: var(--font-medium);
+      color: var(--first-color);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    &__box {
+      @include flex(unset, center);
+      column-gap: 4rem;
+      &__group {
+        display: grid;
+        align-content: flex-start;
+        row-gap: 1rem;
+        &__data {
+          display: flex;
+          column-gap: 0.5rem;
+          &-icon {
+            font-size: 1rem;
+            color: var(--first-color);
+          }
+
+          &-name {
+            font-size: var(--normal-font-size);
+            font-weight: var(--font-medium);
+            line-height: 18px;
+          }
+
+          &-level {
+            font-size: var(--tiny-font-size);
+          }
+        }
+      }
+    }
+  }
+}
