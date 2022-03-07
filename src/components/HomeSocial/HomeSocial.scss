@@ -1,0 +1,33 @@
+@use "../../scss/abstracts/" as *;
+.home__social {
+  position: absolute;
+  bottom: 5rem;
+  left: 0;
+  @include flex(center, unset);
+  flex-direction: column;
+  row-gap: 0.5rem;
+
+  &-link {
+    width: max-content;
+    background-color: var(--container-color);
+    color: var(--first-color);
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    display: flex;
+    font-size: 1rem;
+    transition: var(--transition);
+
+    &:hover {
+      background-color: var(--first-color);
+      color: #fff;
+    }
+  }
+
+  &::after {
+    content: "";
+    width: rem(32);
+    height: rem(2);
+    background-color: var(--first-color);
+    transform: rotate(90deg) translate(16px, 3px);
+  }
+}

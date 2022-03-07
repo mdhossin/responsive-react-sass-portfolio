@@ -1,0 +1,71 @@
+@use "../../scss/abstracts/" as *;
+
+.home {
+  &__container {
+    position: relative;
+    row-gap: 4.5rem;
+    padding-top: 2rem;
+  }
+
+  &__data {
+    text-align: center;
+  }
+
+  &__gretting,
+  &__education {
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+  }
+  &__gretting {
+    display: block;
+    color: var(--title-color);
+    margin-bottom: 0.25rem;
+  }
+
+  &__education {
+    color: var(--text-color);
+    margin-bottom: 2.5rem;
+  }
+
+  &__name {
+    font-size: var(--biggest-font-size);
+  }
+
+  &__handle {
+    justify-self: center;
+    width: 190px;
+    height: 293px;
+    background: linear-gradient(
+      180deg,
+      hsla(var(--first-hue), var(--sat), var(--lig), 1),
+      hsla(var(--first-hue), var(--sat), var(--lig), 0.2)
+    );
+    border-radius: 10rem 10rem 1rem 1rem;
+
+    @include flex(flex-end, center);
+    overflow: hidden;
+    &-img {
+      width: 160px;
+      height: 250px;
+    }
+  }
+
+  &__scroll {
+    position: absolute;
+    color: var(--first-color);
+    right: -1rem;
+    bottom: 5rem;
+    display: grid;
+    row-gap: 2.25rem;
+    justify-items: center;
+
+    &-icon {
+      font-size: 1.25rem;
+    }
+
+    &-name {
+      font-size: var(--smaller-font-size);
+      transform: rotate(-90deg);
+    }
+  }
+}
