@@ -10,22 +10,20 @@ import {
 } from "./pages";
 import Footer from "./pages/Footer/Footer";
 import "./scss/App.scss";
-function App() {
-  return (
-    <>
-      <Navbar />
-      <main>
-        <Home />
-        <About />
-        <Skills />
-        <Services />
-        <Portfolio />
-        <Testimonials />
-        <Contact />
-        <Footer />
-      </main>
-    </>
-  );
-}
+const App = () => (
+  <>
+    <Navbar />
+    <main>
+      <Home />
+      <About />
+      <Skills />
+      <Services />
+      <Portfolio />
+      <Testimonials />
+      <Contact />
+      <Footer />
+    </main>
+  </>
+);
 
 export default App;

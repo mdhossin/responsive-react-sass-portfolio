@@ -14,41 +14,39 @@ import SubHeading from "../../components/SubHeading/SubHeading";
 import { dataTestimonials } from "../../fakedata/fakeData";
 import "./Testimonials.scss";
 
-const Testimonials = () => {
-  return (
-    <section className="testimonials section">
-      <SubHeading subtitle="Review from Clients" title="Testimonials" />
+const Testimonials = () => (
+  <section className="testimonials section">
+    <SubHeading subtitle="Review from Clients" title="Testimonials" />
 
-      <Swiper
-        className="container testimonials__container"
-        // install Swiper modules
-        modules={[Pagination, Autoplay]}
-        spaceBetween={50}
-        slidesPerView={1}
-        navigation
-        autoplay
-        pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
-        // onSwiper={(swiper) => console.log(swiper)}
-        // onSlideChange={() => console.log("slide change")}
-      >
-        {dataTestimonials.map(({ avatar, name, review }, index) => (
-          <SwiperSlide
-            key={`index-${index}`}
-            className="testimonials__testimonial"
-          >
-            <div className="testimonials__testimonial__client">
-              <img src={avatar} alt="avatar" />
-            </div>
-            <h5 className="testimonials__testimonial__client-name">{name}</h5>
-            <small className="testimonials__testimonial__client-review">
-              {review}
-            </small>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </section>
-  );
-};
+    <Swiper
+      className="container testimonials__container"
+      // install Swiper modules
+      modules={[Pagination, Autoplay]}
+      spaceBetween={50}
+      slidesPerView={1}
+      navigation
+      autoplay
+      pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
+      // onSwiper={(swiper) => console.log(swiper)}
+      // onSlideChange={() => console.log("slide change")}
+    >
+      {dataTestimonials.map(({ avatar, name, review }, index) => (
+        <SwiperSlide
+          key={`index-${index}`}
+          className="testimonials__testimonial"
+        >
+          <div className="testimonials__testimonial__client">
+            <img src={avatar} alt="avatar" />
+          </div>
+          <h5 className="testimonials__testimonial__client-name">{name}</h5>
+          <small className="testimonials__testimonial__client-review">
+            {review}
+          </small>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </section>
+);
 
 export default Testimonials;
