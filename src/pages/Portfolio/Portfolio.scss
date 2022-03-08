@@ -2,15 +2,21 @@
 .portfolio {
   &__container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
 
-    @include breakpoints-down("medium") {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-    }
-    @include breakpoints-down("small") {
+    gap: 2.5rem !important;
+
+    @include breakpoints-down("xs") {
       grid-template-columns: 1fr;
+      gap: 1rem !important;
+    }
+
+    @include breakpoint-up("large") {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem !important;
+    }
+    @include breakpoint-up("xlarge") {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem !important;
     }
   }
 
@@ -20,6 +26,10 @@
     border-radius: 2rem;
     border: 1px solid transparent;
     transition: var(--transition);
+
+    @include breakpoints-down("xs") {
+      padding: 1rem;
+    }
 
     &:hover {
       border-color: var(--first-color);
@@ -32,17 +42,36 @@
 
       &-img {
         height: 260px;
+
+        @include breakpoints-down("xs") {
+          height: 220px;
+        }
+        @include breakpoint-up("medium") {
+          height: 350px;
+        }
+
+        @include breakpoint-up("xlarge") {
+          height: 280px;
+        }
       }
     }
 
     &-title {
       margin: 1.2rem 0;
+      @include breakpoints-down("xs") {
+        font-size: var(--normal-font-size);
+      }
     }
 
     &-cta {
       display: flex;
       gap: 1.5rem;
       margin-bottom: 0.7rem;
+      @include breakpoints-down("xs") {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+      }
     }
   }
 }

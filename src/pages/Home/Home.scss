@@ -3,7 +3,7 @@
 .home {
   &__container {
     position: relative;
-    row-gap: 4.5rem;
+    row-gap: 4rem !important;
     padding-top: 2rem;
   }
 
@@ -44,9 +44,29 @@
 
     @include flex(flex-end, center);
     overflow: hidden;
+
+    @include breakpoint-up("xlarge") {
+      width: 290px;
+      height: 400px;
+    }
+
+    @include breakpoints-down("xs") {
+      width: 150px;
+      height: 253px;
+    }
+
     &-img {
       width: 160px;
       height: 250px;
+
+      @include breakpoint-up("xlarge") {
+        width: 220px;
+        height: 300px;
+      }
+      @include breakpoints-down("xs") {
+        width: 130px;
+        height: 220px;
+      }
     }
   }
 
@@ -61,6 +81,10 @@
 
     &-icon {
       font-size: 1.25rem;
+
+      @include breakpoint-up("xlarge") {
+        font-size: 2rem;
+      }
     }
 
     &-name {

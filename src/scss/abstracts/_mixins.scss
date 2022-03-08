@@ -21,20 +21,19 @@
 //   }
 // }
 
-// 640px, 1150px, 1400px / 1rem
+// 576px, 767px, 1024px / 1rem
 
 $breakpoints-up: (
-  "medium": "40em",
-  "large": "71.875em",
-  "xlarge": "87.5em",
+  "medium": "36em",
+  "large": "47.9375em",
+  "xlarge": "64em",
 );
 
-// 639px, 1149px, 1399px
+//320px,  639px, 1149px, 1399px
 
 $breakpoints-down: (
+  "xs": "20em",
   "small": "39.9375em",
-  "medium": "71.8125em",
-  "large": "87.4375em",
 );
 
 @mixin breakpoint-up($size) {

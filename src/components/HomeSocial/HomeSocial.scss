@@ -17,6 +17,11 @@
     font-size: 1rem;
     transition: var(--transition);
 
+    @include breakpoint-up("xlarge") {
+      font-size: 1.25rem;
+      padding: 0.4rem;
+    }
+
     &:hover {
       background-color: var(--first-color);
       color: #fff;
@@ -29,5 +34,9 @@
     height: rem(2);
     background-color: var(--first-color);
     transform: rotate(90deg) translate(16px, 3px);
+
+    @include breakpoint-up("xlarge") {
+      transform: rotate(90deg) translate(16px, 0);
+    }
   }
 }

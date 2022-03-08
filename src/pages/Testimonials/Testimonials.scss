@@ -1,1 +1,48 @@
 @use "../../scss/abstracts/" as *;
+.testimonials {
+  &__container {
+    width: 40%;
+    padding-bottom: 4rem;
+    margin: 0 auto !important;
+    @include breakpoints-down("medium") {
+      width: 86%;
+    }
+    @include breakpoints-down("small") {
+      width: 90%;
+    }
+  }
+
+  &__testimonial {
+    background-color: var(--container-color);
+    text-align: center;
+    padding: 1.25rem 1.5rem;
+    border-radius: 1rem;
+    user-select: none;
+    &__client {
+      width: 4rem;
+      height: 4rem;
+      overflow: hidden;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      border: 0.2rem solid var(--first-color);
+
+      img {
+        object-fit: cover;
+      }
+
+      &-name {
+        font-size: var(--noraml-font-size);
+        font-weight: var(--font-medium);
+        margin-bottom: 1rem;
+      }
+      &-review {
+        font-size: var(--small-font-size);
+      }
+    }
+  }
+}
+
+/* swipper dot background color change */
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  background-color: var(--first-color);
+}

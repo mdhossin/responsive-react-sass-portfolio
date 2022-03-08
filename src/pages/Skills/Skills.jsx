@@ -1,125 +1,106 @@
-import React from "react";
+import SubHeading from "../../components/SubHeading/SubHeading";
+import { backendData, frontendData } from "../../fakedata/fakeData";
 import "./Skills.scss";
-import { BsPatchCheckFill } from "react-icons/bs";
-const Skills = () => {
-  return (
-    <section className="skills section" id="skills">
-      <span className="section__subtitle">My Abilites</span>
-      <h2 className="section__title">My Experience</h2>
+const Skills = () => (
+  <section className="skills section" id="skills">
+    <SubHeading subtitle="My Abilites" title="My Experience" />
 
-      <div className="skills__container container grid">
-        <div className="skills__content">
-          <h3 className="skills__content-title">Frontend Developer</h3>
+    <div className="skills__container container grid">
+      <div className="skills__content">
+        <h3 className="skills__content-title">Frontend Developer</h3>
 
-          <div className="skills__content__box">
-            <div className="skills__content__box__group">
-              <div className="skills__content__box__group__data">
-                <BsPatchCheckFill className="skills__content__box__group__data-icon" />
-                <div>
-                  <h3 className="skills__content__box__group__data-name">
-                    CSS
-                  </h3>
-                  <span className="skills__content__box__group__data-level">
-                    Intermediate
-                  </span>
+        <div className="skills__content__box">
+          <div className="skills__content__box__group">
+            {frontendData
+              .slice(0, 2)
+              .map(({ icon, name, experience }, index) => (
+                <div
+                  key={`index-${index}`}
+                  className="skills__content__box__group__data"
+                >
+                  {icon}
+                  <div>
+                    <h3 className="skills__content__box__group__data-name">
+                      {name}
+                    </h3>
+                    <span className="skills__content__box__group__data-level">
+                      {experience}
+                    </span>
+                  </div>
                 </div>
-              </div>
-              <div className="skills__content__box__group__data">
-                <BsPatchCheckFill className="skills__content__box__group__data-icon" />
-                <div>
-                  <h3 className="skills__content__box__group__data-name">
-                    JavaScript
-                  </h3>
-                  <span className="skills__content__box__group__data-level">
-                    Advance
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="skills__content__box__group">
-              <div className="skills__content__box__group__data">
-                <BsPatchCheckFill className="skills__content__box__group__data-icon" />
-                <div>
-                  <h3 className="skills__content__box__group__data-name">
-                    React
-                  </h3>
-                  <span className="skills__content__box__group__data-level">
-                    Advance
-                  </span>
-                </div>
-              </div>
-              <div className="skills__content__box__group__data">
-                <BsPatchCheckFill className="skills__content__box__group__data-icon" />
-                <div>
-                  <h3 className="skills__content__box__group__data-name">
-                    Material Ui
-                  </h3>
-                  <span className="skills__content__box__group__data-level">
-                    Intermediate
-                  </span>
-                </div>
-              </div>
-            </div>
+              ))}
           </div>
-        </div>
-
-        <div className="skills__content">
-          <h3 className="skills__content-title">Backend Developer</h3>
-
-          <div className="skills__content__box">
-            <div className="skills__content__box__group">
-              <div className="skills__content__box__group__data">
-                <BsPatchCheckFill className="skills__content__box__group__data-icon" />
-                <div>
-                  <h3 className="skills__content__box__group__data-name">
-                    Node
-                  </h3>
-                  <span className="skills__content__box__group__data-level">
-                    Advance
-                  </span>
+          <div className="skills__content__box__group">
+            {frontendData
+              .slice(2, 4)
+              .map(({ icon, name, experience }, index) => (
+                <div
+                  key={`index-${index}`}
+                  className="skills__content__box__group__data"
+                >
+                  {icon}
+                  <div>
+                    <h3 className="skills__content__box__group__data-name">
+                      {name}
+                    </h3>
+                    <span className="skills__content__box__group__data-level">
+                      {experience}
+                    </span>
+                  </div>
                 </div>
-              </div>
-              <div className="skills__content__box__group__data">
-                <BsPatchCheckFill className="skills__content__box__group__data-icon" />
-                <div>
-                  <h3 className="skills__content__box__group__data-name">
-                    Express
-                  </h3>
-                  <span className="skills__content__box__group__data-level">
-                    Intermediate
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="skills__content__box__group">
-              <div className="skills__content__box__group__data">
-                <BsPatchCheckFill className="skills__content__box__group__data-icon" />
-                <div>
-                  <h3 className="skills__content__box__group__data-name">
-                    Mongodb
-                  </h3>
-                  <span className="skills__content__box__group__data-level">
-                    Advance
-                  </span>
-                </div>
-              </div>
-              <div className="skills__content__box__group__data">
-                <BsPatchCheckFill className="skills__content__box__group__data-icon" />
-                <div>
-                  <h3 className="skills__content__box__group__data-name">
-                    Mongoose
-                  </h3>
-                  <span className="skills__content__box__group__data-level">
-                    Good
-                  </span>
-                </div>
-              </div>
-            </div>
+              ))}
           </div>
         </div>
       </div>
-    </section>
-  );
-};
+
+      <div className="skills__content">
+        <h3 className="skills__content-title">Backend Developer</h3>
+
+        <div className="skills__content__box">
+          <div className="skills__content__box__group">
+            {backendData
+              .slice(0, 2)
+              .map(({ icon, name, experience }, index) => (
+                <div
+                  key={`index-${index}`}
+                  className="skills__content__box__group__data"
+                >
+                  {icon}
+                  <div>
+                    <h3 className="skills__content__box__group__data-name">
+                      {name}
+                    </h3>
+                    <span className="skills__content__box__group__data-level">
+                      {experience}
+                    </span>
+                  </div>
+                </div>
+              ))}
+          </div>
+          <div className="skills__content__box__group">
+            {backendData
+              .slice(2, 4)
+              .map(({ icon, name, experience }, index) => (
+                <div
+                  key={`index-${index}`}
+                  className="skills__content__box__group__data"
+                >
+                  {icon}
+                  <div>
+                    <h3 className="skills__content__box__group__data-name">
+                      {name}
+                    </h3>
+                    <span className="skills__content__box__group__data-level">
+                      {experience}
+                    </span>
+                  </div>
+                </div>
+              ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+);
 
 export default Skills;

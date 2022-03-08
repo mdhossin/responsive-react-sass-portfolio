@@ -8,14 +8,4 @@ import pdf from "../assets/Sahadat Hossin.pdf";
 import logo from "../assets/sahadat-logo.png";
 import me from "../assets/sahadat.png";
 
-export default {
-  dental,
-  helios,
-  pelios,
-  profile,
-  resturant,
-  richard,
-  pdf,
-  logo,
-  me,
-};
+export { dental, helios, pelios, profile, resturant, richard, pdf, logo, me };

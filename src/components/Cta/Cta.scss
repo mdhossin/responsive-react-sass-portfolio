@@ -3,6 +3,10 @@
 .home__buttons {
   @include flex(center, center);
   gap: 1.5rem;
+
+  @include breakpoints-down("xs") {
+    flex-direction: column;
+  }
 }
 
 .button {

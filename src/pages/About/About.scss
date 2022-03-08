@@ -3,6 +3,12 @@
 .about {
   &__container {
     row-gap: 2.5rem !important;
+
+    @include breakpoint-up("xlarge") {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      column-gap: 4rem !important;
+    }
   }
 
   &__me {
@@ -18,6 +24,14 @@
     display: grid;
 
     justify-self: center;
+
+    @include breakpoint-up("xlarge") {
+      width: 350px;
+    }
+
+    @include breakpoints-down("xs") {
+      width: 230px;
+    }
     &__img {
       width: 180px;
 
@@ -27,21 +41,42 @@
       &:hover {
         transform: rotate(0);
       }
+
+      @include breakpoint-up("xlarge") {
+        width: 300px;
+      }
     }
   }
 
   &__data {
     text-align: center;
+    @include breakpoint-up("xlarge") {
+      text-align: initial;
+    }
     &__info {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
 
       gap: 0.5rem;
       margin-bottom: 2rem;
+
+      @include breakpoint-up("medium") {
+        grid-template-columns: repeat(3, 140px);
+        justify-content: center;
+      }
+
+      @include breakpoint-up("xlarge") {
+        justify-content: initial;
+      }
       &__box {
         background-color: var(--container-color);
         border-radius: 0.75rem;
         padding: 0.75rem 0.5rem;
+
+        @include breakpoint-up("xlarge") {
+          text-align: center;
+          padding: 1rem;
+        }
         &-icon {
           font-size: 1.5rem;
           color: var(--first-color);
@@ -60,6 +95,16 @@
 
     &__description {
       margin-bottom: 2rem;
+      font-size: 1rem;
+
+      @include breakpoint-up("medium") {
+        padding: 0 5rem;
+      }
+
+      @include breakpoint-up("xlarge") {
+        padding: 0 4rem 0 0;
+        margin-bottom: 2.5rem;
+      }
     }
   }
 }

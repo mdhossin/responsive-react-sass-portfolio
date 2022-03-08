@@ -1,10 +1,9 @@
-import React from "react";
 import Cta from "../../components/Cta/Cta";
 import HomeSocial from "../../components/HomeSocial/HomeSocial";
 import { BiMouse } from "react-icons/bi";
 
-import { images } from "../../constants";
 import "./Home.scss";
+import { me } from "../../constants/images";
 const Home = () => (
   <section className="home section" id="home">
     <div className="container home__container grid">
@@ -12,11 +11,11 @@ const Home = () => (
         <span className="home__gretting">Hello I'm</span>
         <h1 className="home__name">Sahadat</h1>
         <h3 className="home__education">Fullstack Developer</h3>
+        <Cta />
       </div>
-      <Cta />
 
       <div className="home__handle">
-        <img src={images.me} alt="sahadat" className="home__handle-img" />
+        <img src={me} alt="sahadat" className="home__handle-img" />
       </div>
       <HomeSocial />
       <a href="#contact" className="home__scroll">
