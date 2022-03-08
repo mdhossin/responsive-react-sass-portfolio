@@ -1,11 +1,16 @@
 import SubHeading from "../../components/SubHeading/SubHeading";
 import { backendData, frontendData } from "../../fakedata/fakeData";
+import { motion } from "framer-motion";
 import "./Skills.scss";
 const Skills = () => (
   <section className="skills section" id="skills">
     <SubHeading subtitle="My Abilites" title="My Experience" />
 
-    <div className="skills__container container grid">
+    <motion.div
+      whileInView={{ opacity: [0, 1] }}
+      transition={{ duration: 1 }}
+      className="skills__container container grid"
+    >
       <div className="skills__content">
         <h3 className="skills__content-title">Frontend Developer</h3>
 
@@ -99,7 +104,7 @@ const Skills = () => (
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   </section>
 );
 

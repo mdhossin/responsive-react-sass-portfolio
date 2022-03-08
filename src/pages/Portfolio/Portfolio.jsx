@@ -1,11 +1,16 @@
 import SubHeading from "../../components/SubHeading/SubHeading";
 import { portfolioData } from "../../fakedata/fakeData";
+import { motion } from "framer-motion";
 import "./Portfolio.scss";
 const Portfolio = () => (
   <section className="portfolio section">
     <SubHeading subtitle="My Recent Work" title="Portfolio" />
 
-    <div className="container portfolio__container">
+    <motion.div
+      whileInView={{ opacity: [0, 1] }}
+      transition={{ duration: 1 }}
+      className="container portfolio__container"
+    >
       {portfolioData.map(
         ({ img, title, codeLink, codeText, liveLink, liveText }, index) => (
           <article key={`index-${index}`} className="portfolio__item">
@@ -35,7 +40,7 @@ const Portfolio = () => (
           </article>
         )
       )}
-    </div>
+    </motion.div>
   </section>
 );
 

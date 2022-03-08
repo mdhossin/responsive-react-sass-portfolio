@@ -28,8 +28,6 @@ const Testimonials = () => (
       autoplay
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
-      // onSwiper={(swiper) => console.log(swiper)}
-      // onSlideChange={() => console.log("slide change")}
     >
       {dataTestimonials.map(({ avatar, name, review }, index) => (
         <SwiperSlide

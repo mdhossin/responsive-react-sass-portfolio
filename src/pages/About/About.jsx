@@ -1,16 +1,20 @@
 import { FaAward } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
 import { VscFolderLibrary } from "react-icons/vsc";
-import "./About.scss";
-
+import { motion } from "framer-motion";
 import SubHeading from "../../components/SubHeading/SubHeading";
 import { me } from "../../constants/images";
+import "./About.scss";
 
 const About = () => (
   <section className="about section" id="about">
     <SubHeading subtitle="My Intro" title="About Me" />
 
-    <div className="about__container container grid">
+    <motion.div
+      whileInView={{ opacity: [0, 1] }}
+      transition={{ duration: 1 }}
+      className="about__container container grid"
+    >
       <div className="about__me">
         <img src={me} alt="me" className="about__me__img" />
       </div>
@@ -47,7 +51,7 @@ const About = () => (
           Contact Me
         </a>
       </div>
-    </div>
+    </motion.div>
   </section>
 );
 

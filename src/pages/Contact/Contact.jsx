@@ -2,13 +2,18 @@ import { MdOutlineEmail } from "react-icons/md";
 import { RiMessengerLine } from "react-icons/ri";
 import { BsWhatsapp } from "react-icons/bs";
 import { AiOutlineArrowRight } from "react-icons/ai";
-import "./Contact.scss";
+import { motion } from "framer-motion";
 import SubHeading from "../../components/SubHeading/SubHeading";
+import "./Contact.scss";
 const Contact = () => (
   <section className="contact section" id="contact">
     <SubHeading subtitle="Get In Touch" title="Contact Me" />
 
-    <div className="contact__container container grid">
+    <motion.div
+      whileInView={{ opacity: [0, 1] }}
+      transition={{ duration: 1 }}
+      className="contact__container container grid"
+    >
       <div className="contact__content">
         <h3 className="contact__content__title">Talk to me</h3>
         <div className="contact__content__info">
@@ -103,7 +108,7 @@ const Contact = () => (
           </button>
         </form>
       </div>
-    </div>
+    </motion.div>
   </section>
 );
 

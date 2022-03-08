@@ -1,12 +1,17 @@
 import { BsCheck } from "react-icons/bs";
 import SubHeading from "../../components/SubHeading/SubHeading";
 import { serviceData } from "../../fakedata/fakeData";
+import { motion } from "framer-motion";
 import "./Services.scss";
 const Services = () => (
   <section className="services section" id="services">
     <SubHeading subtitle="My Services" title="What I Offer" />
 
-    <div className="services__container container grid">
+    <motion.div
+      whileInView={{ opacity: [0, 1] }}
+      transition={{ duration: 1 }}
+      className="services__container container grid"
+    >
       {serviceData.map(({ name }, index) => (
         <div className="services__card" key={`index-${index}`}>
           <h3 className="services__card__title">{name}</h3>
@@ -33,7 +38,7 @@ const Services = () => (
           </ul>
         </div>
       ))}
-    </div>
+    </motion.div>
   </section>
 );
 
