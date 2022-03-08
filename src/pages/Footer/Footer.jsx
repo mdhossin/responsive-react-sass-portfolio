@@ -12,25 +12,25 @@ const Footer = () => (
           </a>
         </li>
         <li>
-          <a href="#home" className="footer__list-link">
+          <a href="#services" className="footer__list-link">
             Project
           </a>
         </li>
         <li>
-          <a href="#home" className="footer__list-link">
+          <a href="#testimonial" className="footer__list-link">
             Testimonial
           </a>
         </li>
       </ul>
 
       <ul className="footer__social">
-        <a href="facebook" className="footer__social__link">
+        <a href="https://facebook.com" className="footer__social__link">
           <FaFacebookF className="footer__social__link-icon" />
         </a>
-        <a href="facebook" className="footer__social__link">
+        <a href="https://facebook.com" className="footer__social__link">
           <AiOutlineGithub className="footer__social__link-icon" />
         </a>
-        <a href="facebook" className="footer__social__link">
+        <a href="https://github.com" className="footer__social__link">
           <AiOutlineGithub className="footer__social__link-icon" />
         </a>
       </ul>
